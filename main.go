@@ -15,7 +15,7 @@ var (
 
 func main() {
 
-	fmt.Printf("dirweb %s (%s)\n", version, commit[:7])
+	fmt.Printf("dirweb v%s (%s)\n", version, commit[:7])
 
 	var dir string
 	var port int

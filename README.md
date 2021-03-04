@@ -13,11 +13,9 @@ The arguments are as follows.
 
 ```
 Usage of dirweb:
-  -d string
-        dir (default "./")
-  -h    help
-  -p int
-        port (default 3000)
+  -d, --dir string   dir (default "./")
+  -h, --help         help
+  -p, --port int     port (default 3000)
 ```
 
 ## Install

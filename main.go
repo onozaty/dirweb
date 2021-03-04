@@ -1,11 +1,12 @@
 package main
 
 import (
-	"flag"
 	"fmt"
 	"net/http"
 	"os"
 	"strconv"
+
+	flag "github.com/spf13/pflag"
 )
 
 var (
@@ -24,10 +25,11 @@ func main() {
 	var port int
 	var help bool
 
-	flag.StringVar(&dir, "d", "./", "dir")
-	flag.IntVar(&port, "p", 3000, "port")
-	flag.BoolVar(&help, "h", false, "help")
+	flag.StringVarP(&dir, "dir", "d", "./", "dir")
+	flag.IntVarP(&port, "port", "p", 3000, "port")
+	flag.BoolVarP(&help, "help", "h", false, "help")
 	flag.Parse()
+	flag.CommandLine.SortFlags = false
 
 	if help {
 		flag.Usage()
